@@ -1,0 +1,61 @@
+# Audio Generation Pipeline Configuration
+# This file configures the ElevenLabs TTS/SFX generation and timing refinement
+
+# Input Configuration
+# Path to the shot list JSON from pitch_to_shotlist pipeline
+# Can use wildcards to automatically select the most recent
+shot_list_path: "outputs/pitch_to_shotlist_2025-09-29_23-53-48/05_shot_list_final.json"
+# Or specify exact path:
+# shot_list_path: "outputs/pitch_to_shotlist_2025-09-29_13-02-26/05_shot_list_final.json"
+
+# ElevenLabs API Configuration
+# You can put your API key here or in .env file (recommended)
+# elevenlabs_api_key: "your_key_here"
+
+# Model Configuration
+model_id: "eleven_v3"  # ElevenLabs TTS model
+dialogue_output_format: "mp3_44100_128"  # Output format for dialogue audio
+
+# Duration Limits
+max_dialogue_duration: 10  # Maximum seconds for dialogue (will compress if exceeded)
+sfx_duration_limit: 10  # Maximum seconds for sound effects
+
+# Voice Mappings
+# Map character names to ElevenLabs voice IDs
+# Get voice IDs from: https://elevenlabs.io/voice-library
+# Or use your cloned voice IDs
+voice_mappings:
+  # Example mappings - replace with actual voice IDs
+  MILO: "G3RoTSUNDEmVho8ewJ6M"  # Example: Rachel voice
+  SEBBY: "5PvP4tTFBUJWI1LoXl0F"  # Example: Antoni voice
+  COMPUTER: "ZEcx3Wdpj4EvM8PltzHY"  # Example: Adam voice
+  NARRATOR: "EXAVITQu4vr4xnSDxMaL"  # Example: Bella voice
+  DEFAULT: "21m00Tcm4TlvDq8ikWAM"  # Default voice for unmapped characters
+
+# Timing Refinement Settings
+timing_refinement:
+  enabled: true  # Whether to use Claude for timing refinement
+  waveform_chars: 40  # Number of Unicode characters for waveform visualization
+
+# Testing Settings
+# Use these to limit processing for faster testing
+testing:
+  scene_limit: null  # Set to a number to process only first N scenes (e.g., 2)
+  max_shots: null    # Set to a number to process only first N shots total (e.g., 10)
+
+# Audio Processing Settings
+audio_processing:
+  strip_parentheticals: true  # Remove (parenthetical text) before TTS
+  preserve_brackets: true  # Keep [bracketed annotations] for TTS engine
+  compression_max_iterations: 5  # Max attempts to compress dialogue under 10s
+
+# Optional: Override prompt influence for sound effects
+sfx_settings:
+  prompt_influence: 0.9  # How much the text prompt influences the generation (0.0-1.0) - Higher = better adherence
+
+# Audio Mixing Settings (Stage 4)
+mixing:
+  sfx_volume: 0.7  # Volume level for SFX (0.0-1.0, where 1.0 is full volume)
+  target_duration: 10  # Target duration for mixed clips in seconds
+  center_dialogue: true  # Whether to center dialogue in the 10-second window
+  padding_silence: true  # Add silence padding if total audio is less than target duration

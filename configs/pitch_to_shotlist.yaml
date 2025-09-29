@@ -1,0 +1,93 @@
+# Giant Content Pipeline Configuration
+# Fill in all required fields before running the pipeline
+
+# Main project bible - describe your show, characters, world, etc.
+bible: |
+  # The Milo & Sebby Show Bible
+
+  ## What Is The Show
+
+  Milo is a great inventor. Every week he dreams up and creates a new and exciting invention to show to his best friend Sebby. Although things never go as planned! Without fail, Milo's inventions spiral into chaos. As Milo's contraptions run amok through his basement lab, Milo and Sebby scramble to contain the mayhem before things get too out of hand.
+
+  ## Our Story Engine
+
+  Every episode sees Milo & Sebby confronted with an everyday problem relatable to kids - their room needs to be tidied, the dishes are dirty, they don't know how to tie their shoes. Milo is always confident he has a solution, unveiling his latest invention purpose built to fix that exact problem! Sebby is right there with him, excited to see this solution at work! The invention starts off fine at first, but something that Milo has overlooked causes things to spiral out of control. Milo and Sebby combat the out of control invention and restore normality, having learned the awesome power of STEM.
+
+  ## Emotional Learning
+
+  This show can function more as a pure comedy show, with the excitement of seeing things get out of control. Small emotional throughlines can be built into stories (i.e the importance of speaking up when a friend is making a bad choice, or learning that cutting corners can lead to bad results) but the main thrust of the episodes will be about putting the genie back in the bottle as it were.
+
+  ## STEM Forward
+
+  This show can be a flagship for STEM minded children and parents with an emphasis on scientific learning and creative application of true scientific principles. We can have introductory level learning on gravity, heat, physics - whatever we feel will serve the story. With a clear belief that 'Science holds the answers' Milo presents an enthusiastic champion for the world of STEM, even if his application can go sideways! The characters have a clear maxim that through the application of their scientific skills they can overcome the petty annoyances of everyday life, a little bit Wallace and Gromit in that sense.
+
+  ## Homemade Inventions
+
+  Appealing to the 4-7 age range, the inventions that Milo pulls together are rarely pristine stainless steel but rather a hodgepodge of household items, found objects and a lot of sticky tape. Rather than have an ACME that he sends away to, Milo sources all of his equipment from Beatrice's Bric-a-Brac - a local junk store overflowing with cool items waiting to be discovered. We want the visual identity of the inventions to reflect the kind of chaotic craft that a kid might make in their own home, where a box and a tube can be a time machine! This will serve not just to make the idea of STEM more attainable and imitable for the viewer but also reinforce the idea that these characters are kids making magic happen on their kitchen table.
+
+  ## Characters
+
+  ### Milo
+  Milo is a genius, small of stature but big of brain he is all potential and energy in a bite sized package. But, most importantly - he is still a kid. He speaks with a big vocabulary, but he doesn't always use the right words. He can build anything with household items, but they won't always work as expected. He is logical, passionate, and sometimes too serious. But he is guided by an overwhelming love of STEM and a true belief in the potential of the human mind to manifest the solution to all of life's problems.
+
+  ### Sebby
+  Sebby is an ordinary kid swept up in the orbit of his brilliant friend. He is constantly in awe of what Milo can do and is his biggest fan, head cheerleader and first hand up to be experimented on. This enthusiasm is at the core of his character, he is not a nay-sayer or voice of reason - he is an excitable and willing participant in all of Milo's chaos. Thanks to the example Milo sets, Sebby is in awe of the potential of STEM (but mostly he's in awe of Milo). If there's one thing that will motivate him more than impressing Milo it is food - his insatiable appetite can override his thinking so watch out if there's a sandwich around!
+
+  ### Computer
+  Computer is just that, a computer! A sophisticated AI not unlike Tony Stark's Jarvis, Computer is a friendly female helper program that Milo uses to build anything he can dream up. Computer has a little quirk however, in her efforts to be more human, Milo has programmed her with a sense of humour so she is always quick with jokes, riddles and puns in an effort to entertain Milo and Sebby in between projects.
+
+  ### Sandy
+  Sandy may be small but she is a dedicated gearhead. While Milo is programming computers she is assembling engines. Her deft touch with all things mechanical prompts an uneasy alliance and grudging respect from Milo - when he needs a specialty part built or sourced he reaches out to her. Living with her Mom in Beatrice's Bric-a-Brac thrift store she is the first call when Milo and Sebby need something special. She enjoys helping the boys out - even if they ignore her warnings about the chaos they are inevitably about to release.
+
+  ## Parents
+
+  ### Milo's Mom
+  Milo's Mom is the picture of loving and supportive parenting, even if she has no idea about any of the sciencey things Milo is always talking about. Putting out a simple, midwestern vibe she is the picture of sensible normality. While Milo is talking about going to the moon, she is reminding him to tidy his room. She is impressed by his inventions in the way a parent would be impressed with a child's drawing of a cat - she's just glad he has a hobby and thinks he should get an A plus for effort!
+
+  ### Sebby's Dad
+  Sebby's Dad is not a tech guy! Outdoorsy, he loves the smell of the woods and the sun on his neck. In his opinion, technology peaked with the camping peg and all other 'modern advancements' are just a distraction from the beauty of nature. He's happy that his awkward son has found a friend, even if he and Milo are operating on completely different wavelengths. He has passed on a deep knowledge of nature to Sebby which comes in handy more than you'd think.
+
+  ### Beatrice
+  Beatrice runs the local thrift store - the source of all of Milo's bits and bobs that he uses to create his wondrous inventions. As someone who sees the value in recycling and reusing, her store is overflowing with little bits of interesting junk, everything a kid could need! Her friendly nature and willingness to support his inventions makes Beatrice one of Milo's favourite people.
+
+  ## Locations
+
+  ### Milo's House
+  More than any of the other shows, the stories of Milo & Sebby revolve around Milo's house. Establishing a more rural setting, Milo's house has plenty of land and wide open spaces. Standard sets such as a lounge room, kitchen and backyard exist as needed. But outside is the real fun!
+
+  ### Milo's Lab
+  From an elevator in the base of a mighty oak tree, Milo ascends into his treehouse which is secretly home to his amazing laboratory where he stores all of his coolest inventions. Under the watchful eye of Computer, the whole space is a kids' wonderland of technology and invention - whatever you think of can be made here! This space has the potential to include whatever the stories need such as testing ranges a la Q in James Bond, holding pens for robots in development and adjoining rooms extending up into the higher branches of the tree.
+
+  ### Beatrice's Bric-a-Brac
+  A kids dream thrift store, overflowing with cool things that could be assembled into awesome inventions by just the right mind. When Milo and Sebby go 'shopping' it's here. Not matter what their latest invention calls for they can find something almost the same here among the cast off bits and bobs. Some visits may be for a specific part, or a custom build from Sandy. Some visits may start a story off as Milo finds something amazing and has a brainwave for what to build. The aisles are endless and every corner holds something special.
+
+  ## Episodes
+
+  ### Tidy Your Room
+  Milo may have an ordered mind, but his bedroom is a mess! Genius takes its toll and his pre-occupied mind has no time to bother with picking up dirty socks or old water glasses! When his Mom tells him that he needs to get it done today before her friends visit, Milo has a better idea! With Sebby's help he unleashes CleanerBot 5000! His room is picked up in record time, but it's not going to stop there! As it takes off into the house it starts rearranging the furniture, painting the walls bright pink and soap scrubbing the television! It's out of control! Milo and Sebby need to get things back to normal before his Mom notices what is happening to her house!
+
+  ### Swingset
+  Sebby's Dad has come over to use his outdoor skills to build them a swingset in the backyard! But this simple structure of wood and nails does not impress Milo. Insisting that they could make some improvements, he starts building it out into the world's coolest playground, complete with a video game room, ziplines and a weightlessness room! But are all these improvements really making it better? The two soon come to realise that when it comes to playing in the outdoors, sometimes the simple things are better.
+
+  ### Mech Suit
+  Milo may be a genius, but he's also pretty small - something that he has trouble coming to terms with. When Sebby suggests he could invent something to help, Milo has a brainwave and designs a full body mech suit that finally makes him tall and strong! But being big has unexpected disadvantages and it's not long before Milo is starting to see that being small wasn't so bad after all.
+
+# User messages for pitch generation
+pitch_user_message: |
+  Write something fun
+
+# Kiddo pitch instruction configuration
+# Options for mode: "preset", "append", or "null"
+kiddo_pitch_instruction:
+  mode: "null"  # Options: "preset", "append", "null"
+  append_text: ""  # Only used if mode is "append"
+
+# User messages for script generation
+script_user_message: |
+  make sure to use multiple locations in the script to enrich the visual storytelling.
+
+# Kiddo script instruction configuration
+# Options for mode: "preset", "append", or "null"
+kiddo_script_instruction:
+  mode: "null"  # Options: "preset", "append", "null"
+  append_text: ""  # Only used if mode is "append"

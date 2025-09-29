@@ -1,0 +1,157 @@
+# IMPORTANT:
+WE WILL ALWAYS BE USING eleven_v3
+
+---
+title: Developer quickstart
+subtitle: Learn how to make your first ElevenLabs API request.
+---
+
+The ElevenLabs API provides a simple interface to state-of-the-art audio [models](/docs/models) and [features](/docs/api-reference/introduction). Follow this guide to learn how to create lifelike speech with our Text to Speech API. See the [developer guides](/docs/quickstart#explore-our-developer-guides) for more examples with our other products.
+
+## Using the Text to Speech API
+
+<Steps>
+    <Step title="Create an API key">
+      [Create an API key in the dashboard here](https://elevenlabs.io/app/settings/api-keys), which you’ll use to securely [access the API](/docs/api-reference/authentication).
+      
+      Store the key as a managed secret and pass it to the SDKs either as a environment variable via an `.env` file, or directly in your app’s configuration depending on your preference.
+      
+      ```js title=".env"
+      ELEVENLABS_API_KEY=<your_api_key_here>
+      ```
+      
+    </Step>
+    <Step title="Install the SDK">
+      We'll also use the `dotenv` library to load our API key from an environment variable.
+      
+      <CodeBlocks>
+          ```python
+          pip install elevenlabs
+          pip install python-dotenv
+          ```
+      
+          ```typescript
+          npm install @elevenlabs/elevenlabs-js
+          npm install dotenv
+          ```
+      
+      </CodeBlocks>
+      
+
+      <Note>
+        To play the audio through your speakers, you may be prompted to install [MPV](https://mpv.io/)
+      and/or [ffmpeg](https://ffmpeg.org/).
+      </Note>
+    </Step>
+    <Step title="Make your first request">
+      Create a new file named `example.py` or `example.mts`, depending on your language of choice and add the following code:
+       {/* This snippet was auto-generated */}
+       <CodeBlocks>
+       ```python
+       from dotenv import load_dotenv
+       from elevenlabs.client import ElevenLabs
+       from elevenlabs.play import play
+       import os
+       
+       load_dotenv()
+       
+       elevenlabs = ElevenLabs(
+         api_key=os.getenv("ELEVENLABS_API_KEY"),
+       )
+       
+       audio = elevenlabs.text_to_speech.convert(
+           text="The first move is what sets everything in motion.",
+           voice_id="JBFqnCBsd6RMkjVDRZzb",
+           model_id="eleven_multilingual_v2",
+           output_format="mp3_44100_128",
+       )
+       
+       play(audio)
+       
+       ```
+       
+       ```typescript
+       import { ElevenLabsClient, play } from '@elevenlabs/elevenlabs-js';
+       import 'dotenv/config';
+       
+       const elevenlabs = new ElevenLabsClient();
+       const audio = await elevenlabs.textToSpeech.convert('JBFqnCBsd6RMkjVDRZzb', {
+         text: 'The first move is what sets everything in motion.',
+         modelId: 'eleven_multilingual_v2',
+         outputFormat: 'mp3_44100_128',
+       });
+       
+       await play(audio);
+       
+       ```
+       
+       </CodeBlocks>
+    </Step>
+    <Step title="Run the code">
+        <CodeBlocks>
+            ```python
+            python example.py
+            ```
+
+            ```typescript
+            npx tsx example.mts
+            ```
+        </CodeBlocks>
+
+        You should hear the audio play through your speakers.
+    </Step>
+
+</Steps>
+
+## Explore our developer guides
+
+Now that you've made your first ElevenLabs API request, you can explore the other products that ElevenLabs offers.
+
+<CardGroup cols={2}>
+  <Card
+    title="Speech to Text"
+    icon="duotone pen-clip"
+    href="/docs/cookbooks/speech-to-text/quickstart"
+  >
+    Convert spoken audio into text
+  </Card>
+  <Card title="ElevenLabs Agents" icon="duotone comments" href="/docs/agents-platform/quickstart">
+    Deploy conversational voice agents
+  </Card>
+  <Card title="Music" icon="duotone music" href="/docs/cookbooks/music/quickstart">
+    Generate studio-quality music
+  </Card>
+  <Card
+    title="Voice Cloning"
+    icon="duotone clone"
+    href="/docs/cookbooks/voices/instant-voice-cloning"
+  >
+    Clone a voice
+  </Card>
+  <Card title="Voice Remixing" icon="duotone shuffle" href="/docs/cookbooks/voices/remix-a-voice">
+    Remix a voice
+  </Card>
+  <Card title="Sound Effects" icon="duotone explosion" href="/docs/cookbooks/sound-effects">
+    Generate sound effects from text
+  </Card>
+  <Card title="Voice Changer" icon="duotone message-pen" href="/docs/cookbooks/voice-changer">
+    Transform the voice of an audio file
+  </Card>
+  <Card title="Voice Isolator" icon="duotone ear" href="/docs/cookbooks/voice-isolator">
+    Isolate background noise from audio
+  </Card>
+  <Card title="Voice Design" icon="duotone paint-brush" href="/docs/cookbooks/voices/voice-design">
+    Generate voices from a single text prompt
+  </Card>
+  <Card title="Dubbing" icon="duotone language" href="/docs/cookbooks/dubbing">
+    Dub audio/video from one language to another
+  </Card>
+  <Card
+    title="Forced Alignment"
+    icon="duotone objects-align-left"
+    href="/docs/cookbooks/forced-alignment"
+  >
+    Generate time-aligned transcripts for audio
+  </Card>
+</CardGroup>
+

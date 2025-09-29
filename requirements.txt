@@ -1,0 +1,15 @@
+# Core dependencies
+anthropic>=0.18.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# Audio processing
+elevenlabs>=0.3.0
+librosa>=0.10.0
+soundfile>=0.12.0
+numpy>=1.24.0
+pydub>=0.25.0
+
+# Audio playback (optional, for testing)
+# mpv (install via system package manager)
+# ffmpeg (install via system package manager)

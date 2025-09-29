@@ -1,0 +1,97 @@
+---
+title: Sound Effects quickstart
+subtitle: Learn how to generate sound effects using the Sound Effects API.
+---
+
+This guide will show you how to generate sound effects using the Sound Effects API.
+
+## Using the Sound Effects API
+
+<Steps>
+    <Step title="Create an API key">
+        [Create an API key in the dashboard here](https://elevenlabs.io/app/settings/api-keys), which you’ll use to securely [access the API](/docs/api-reference/authentication).
+        
+        Store the key as a managed secret and pass it to the SDKs either as a environment variable via an `.env` file, or directly in your app’s configuration depending on your preference.
+        
+        ```js title=".env"
+        ELEVENLABS_API_KEY=<your_api_key_here>
+        ```
+        
+    </Step>
+    <Step title="Install the SDK">
+        We'll also use the `dotenv` library to load our API key from an environment variable.
+        
+        <CodeBlocks>
+            ```python
+            pip install elevenlabs
+            pip install python-dotenv
+            ```
+        
+            ```typescript
+            npm install @elevenlabs/elevenlabs-js
+            npm install dotenv
+            ```
+        
+        </CodeBlocks>
+        
+
+        <Note>
+            To play the audio through your speakers, you may be prompted to install [MPV](https://mpv.io/)
+            and/or [ffmpeg](https://ffmpeg.org/).
+        </Note>
+    </Step>
+    <Step title="Make the API request">
+        Create a new file named `example.py` or `example.mts`, depending on your language of choice and add the following code:
+
+        <CodeBlocks>
+        ```python maxLines=0
+        # example.py
+        import os
+        from dotenv import load_dotenv
+        from elevenlabs.client import ElevenLabs
+        from elevenlabs.play import play
+
+        load_dotenv()
+
+        elevenlabs = ElevenLabs(
+          api_key=os.getenv("ELEVENLABS_API_KEY"),
+        )
+        audio = elevenlabs.text_to_sound_effects.convert(text="Cinematic Braam, Horror")
+
+        play(audio)
+        ```
+
+        ```typescript
+        // example.mts
+        import { ElevenLabsClient, play } from "@elevenlabs/elevenlabs-js";
+        import "dotenv/config";
+
+        const elevenlabs = new ElevenLabsClient();
+
+        const audio = await elevenlabs.textToSoundEffects.convert({
+          text: "Cinematic Braam, Horror",
+        });
+
+        await play(audio);
+        ```
+        </CodeBlocks>
+    </Step>
+    <Step title="Execute the code">
+        <CodeBlocks>
+            ```python
+            python example.py
+            ```
+
+            ```typescript
+            npx tsx example.mts
+            ```
+        </CodeBlocks>
+
+        You should hear your generated sound effect playing through your speakers.
+    </Step>
+
+</Steps>
+
+## Next steps
+
+Explore the [API reference](/docs/api-reference/speech-to-text/convert) for more information on the Speech to Text API and its options.
